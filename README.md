@@ -15,5 +15,11 @@ This app provides an intuitive user interface where users can perform various st
 
 ## App Screenshots 
 
-![[Screenshot from 2023-05-20 11-49-32.png]]
+![sign in page](https://github.com/ayoubouria/electro-shop/blob/master/Screenshot%20from%202023-05-20%2011-49-32.png)
+
+![home page](https://github.com/ayoubouria/electro-shop/blob/master/Screenshot%20from%202023-05-20%2011-49-47.png)
+
+![Products Page](https://github.com/ayoubouria/electro-shop/blob/master/Screenshot%20from%202023-05-20%2011-49-54.png)
+
+
 
