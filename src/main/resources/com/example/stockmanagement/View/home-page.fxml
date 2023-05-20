@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stockmanagement.Controller.HomePageController">
+   <top>
+      <HBox prefHeight="20.0" prefWidth="1650.0">
+         <children>
+            <FontIcon fx:id="minimizeIcon" onMouseEntered="#iconHover" onMouseExited="#exitIconHover" scaleX="1.5" scaleY="1.5">
+               <HBox.margin>
+                  <Insets left="1560.0" top="6.0" />
+               </HBox.margin>
+            </FontIcon>
+            <FontIcon fx:id="maximizeIcon" onMouseEntered="#iconHover" onMouseExited="#exitIconHover" scaleX="1.5" scaleY="1.5" translateX="-10.0">
+               <HBox.margin>
+                  <Insets left="25.0" top="6.0" />
+               </HBox.margin>
+            </FontIcon>
+            <FontIcon fx:id="exitIcon1" onMouseEntered="#iconHover" onMouseExited="#exitIconHover" scaleX="1.5" scaleY="1.5" styleClass="exit-icon" translateX="-17.0" wrappingWidth="18.666667461395264">
+               <HBox.margin>
+                  <Insets left="25.0" top="6.0" />
+               </HBox.margin>
+            </FontIcon>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <BorderPane fx:id="mainDiv" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox fx:id="hbox" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <WebView fx:id="webview" prefHeight="100.0" prefWidth="200.0">
+                     <HBox.margin>
+                        <Insets left="60.0" top="14.0" />
+                     </HBox.margin>
+                  </WebView>
+                  <FontIcon fx:id="themeIcon" scaleX="1.5" scaleY="1.5">
+                     <HBox.margin>
+                        <Insets left="1050.0" top="43.0" />
+                     </HBox.margin>
+                  </FontIcon>
+                  <Label fx:id="usernameLabel" prefHeight="51.0" prefWidth="160.0">
+                     <HBox.margin>
+                        <Insets left="70.0" top="23.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Caskaydia Cove Nerd Font Complete Windows Compatible Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <MenuButton fx:id="menuButton" mnemonicParsing="false" styleClass="no-arrow">
+                    <items>
+                      <MenuItem fx:id="editProfile" mnemonicParsing="false" onAction="#editProfileAction" text="Edit Profile" />
+                      <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#logoutAction" text="Logout" />
+                    </items>
+                     <HBox.margin>
+                        <Insets top="30.0" />
+                     </HBox.margin>
+                  </MenuButton>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox fx:id="vbox" prefHeight="876.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="homeButton" onMouseClicked="#showHomePage" prefHeight="50.0" prefWidth="250.0" text="Home">
+                     <graphic>
+                        <FontIcon />
+                     </graphic>
+                     <font>
+                        <Font name="Caskaydia Cove Nerd Font Complete Windows Compatible Regular" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="50.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <HBox prefHeight="50.0" prefWidth="200.0" />
+                  <JFXButton fx:id="productsButton" onMouseClicked="#showProductsPage" prefHeight="50.0" prefWidth="250.0" text="Products">
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Caskaydia Cove Nerd Font Complete Windows Compatible Regular" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <HBox prefHeight="50.0" prefWidth="200.0" />
+                  <JFXButton fx:id="clientsButton" onMouseClicked="#showClientsPage" prefHeight="50.0" prefWidth="250.0" text="Clients">
+                     <graphic>
+                        <FontIcon />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Caskaydia Cove Nerd Font Complete Windows Compatible Regular" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <HBox prefHeight="50.0" prefWidth="200.0" />
+                  <JFXButton fx:id="ordersButton" onMouseClicked="#showOrdersPage" prefHeight="50.0" prefWidth="250.0" text="Orders">
+                     <graphic>
+                        <FontIcon />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Caskaydia Cove Nerd Font Complete Windows Compatible Regular" size="20.0" />
+                     </font>
+                  </JFXButton>
+                  <HBox prefHeight="50.0" prefWidth="200.0" />
+                  <JFXButton fx:id="usersButton" onMouseClicked="#showUsersPage" prefHeight="50.0" prefWidth="250.0" text="Users">
+                     <graphic>
+                        <FontIcon />
+                     </graphic>
+                     <font>
+                        <Font name="Caskaydia Cove Nerd Font Complete Windows Compatible Regular" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <BorderPane fx:id="mainBorderPan" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <Separator scaleX="0.976" BorderPane.alignment="CENTER" />
+               </top>
+               <left>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" scaleY="1.03" BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <AnchorPane fx:id="rootAnchor" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="844.0" prefWidth="1321.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stockmanagement.Controller.ProductPageController">
+   <children>
+      <Label layoutX="80.0" layoutY="45.0" prefHeight="81.0" prefWidth="249.0" text="Products">
+         <font>
+            <Font name="Caskaydia Cove Nerd Font Complete Windows Compatible Regular" size="39.0" />
+         </font>
+      </Label>
+      <TableView fx:id="productTableView" editable="true" layoutX="48.0" layoutY="142.0" prefHeight="653.0" prefWidth="1226.0">
+        <columns>
+          <TableColumn fx:id="IdColumn" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Name" />
+            <TableColumn fx:id="codeColumn" prefWidth="94.0" text="Code" />
+            <TableColumn fx:id="categoryColumn" prefWidth="162.0" text="Category" />
+            <TableColumn fx:id="priceColumn" prefWidth="152.0" text="Price (DHS)" />
+            <TableColumn fx:id="quantityColumn" prefWidth="152.0" text="Quantity" />
+            <TableColumn fx:id="positionColumn" prefWidth="152.0" text="Position" />
+            <TableColumn fx:id="actionsColumn" prefWidth="228.0" text="Actions" />
+        </columns>
+         <styleClass>
+            <String fx:value="striped" />
+            <String fx:value="bordered" />
+            <String fx:value="align-center" />
+         </styleClass>
+      </TableView>
+      <Button fx:id="addBtn" layoutX="1192.0" layoutY="68.0" mnemonicParsing="false" onAction="#addProduct" styleClass="accent" text="Add" />
+      <Button fx:id="refetchBtn" layoutX="1149.0" layoutY="68.0" mnemonicParsing="false" onMouseClicked="#refetch" />
+   </children>
+</AnchorPane>
