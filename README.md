@@ -15,3 +15,5 @@ This app provides an intuitive user interface where users can perform various st
 
 ## App Screenshots 
 
+![[Screenshot from 2023-05-20 11-49-32.png]]
+
